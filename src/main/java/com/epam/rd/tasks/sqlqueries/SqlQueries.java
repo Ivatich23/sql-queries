@@ -17,8 +17,8 @@ public class SqlQueries {
 
     //Select employees having no more than 5 characters in last name sorted by last name in ascending order
     //language=HSQLDB
-    String select02 = "SELECT id, lastname, salary FROM EMPLOYEE WHERE lastname like '_____' OR lastname like '____'" +
-            "OR lastname like '___' OR lastname like '__' OR lastname like '_' ORDER BY lastname";
+    String select02 = "SELECT id, lastname, salary FROM EMPLOYEE WHERE  length(lastname)<6" +
+            " ORDER BY lastname ";
 
     //Select employees having salary no less than 2000 and no more than 3000
     //language=HSQLDB
